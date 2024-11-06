@@ -1,16 +1,26 @@
 const getPegawai = async (req, res) => {
   try {
-    isiData = [
-      {
-        nip: "11",
-        nama: "Lala",
-      },
-      {
-        nip: "12",
-        nama: "Lili",
-      },
-    ];
-
+    let isiData = [];
+    if (
+      process.env.DB_NAME == "dbtes" &&
+      process.env.DB_USER == "root" &&
+      process.env.DB_PASSWORD == "super"
+    ) {
+      //console.log("benar");
+      isiData = [
+        {
+          nip: "111",
+          nama: "jati",
+        },
+        {
+          nip: "222",
+          nama: "lala",
+        },
+      ];
+    } else {
+      //console.log("salah");
+      isiData = [];
+    }
     res.status(200).json({
       error: "false",
       code: "00",

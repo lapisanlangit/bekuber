@@ -37,5 +37,10 @@ app.get("/", function (req, res) {
 });
 app.use("/pegawai", require("./src/routes/pegawai"));
 app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ` + process.env.PORT);
+  console.log(
+    `Example app listening on  ` +
+      process.env.HOST +
+      " PORT : " +
+      process.env.PORT,
+  );
 });
