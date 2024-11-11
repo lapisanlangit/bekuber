@@ -4,7 +4,8 @@ const getPegawai = async (req, res) => {
     if (
       process.env.DB_NAME == "dbtes" &&
       process.env.DB_USER == "root" &&
-      process.env.DB_PASSWORD == "super"
+      process.env.DB_PASSWORD == "super" &&
+      process.env.DB_HOST == "localhost"
     ) {
       //console.log("benar");
       isiData = [
